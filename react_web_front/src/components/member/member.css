@@ -6,3 +6,29 @@
 .join-wrap .input-wrap {
   padding: 10px 30px;
 }
+.join-button-box {
+  padding: 20px 30px;
+}
+.join-button-box > button {
+  width: 100%;
+}
+
+.login-wrap {
+  width: 500px;
+  margin: 0 auto;
+  align-self: center;
+}
+.login-wrap .input-wrap {
+  padding: 30px;
+}
+.login-button-box {
+  padding: 30px;
+}
+.login-button-box > button {
+  width: 100%;
+}
+.member-link-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
