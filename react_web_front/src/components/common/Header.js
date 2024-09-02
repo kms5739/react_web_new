@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
 import "./default.css";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -51,13 +52,15 @@ const HeaderLink = () => {
   const logout = () => {
     setLoginId("");
     setMemberType(0);
+    delete axios.defaults.headers.common["Authorization"];
+    window.localStorage.removeItem("refreshToken");
   };
   return (
     <ul className="user-menu">
       {isLogin ? (
         <>
           <li>
-            <Link to="#">{loginId}</Link>
+            <Link to="/member">{loginId}</Link>
           </li>
           <li>
             <Link to="#" onClick={logout}>

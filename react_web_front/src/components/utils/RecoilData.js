@@ -1,7 +1,7 @@
 //Recoil을 이용해서 전체 애플리케이션에서 사용할 데이터를 선언
 //로그인정보는 특정컴포넌트가 아니라 애플리케이션 전체적으로 영향을 줌
 // -> 관련데이터를 App 컴포넌트에 선언하고 계속 전달
-//기존 SSR에서 session역할을 recoil이 대신 수행 -> 서버는 더이상 상태를 갖지 않을 것이므로(session 사용X)
+//기존 SSR에서 'session역할'을 recoil이 대신 수행 -> 서버는 더이상 상태를 갖지 않을 것이므로(session 사용X)
 
 import { atom, selector } from "recoil";
 
