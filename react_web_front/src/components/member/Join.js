@@ -52,7 +52,7 @@ const Join = () => {
   //'비밀번호' / '비밀번호 확인'이 같은지 체크에서 메세지 출력
   //react에서는 요소 선택 시 document.querySelector()방식을 권고하지 않음
   //-> useRef 훅을 이용하여 요소와 연결해서 사용(연결하고 싶은 태그의 ref속성에 해당 객체 적용)
-  //ex. 140번째줄에 ref={pwMessage}
+  //ex. 161번째줄에 ref={pwMessage}
   //연결이 되면 해당 객체의 current속성이 dom객체를 의미(지칭)
   const pwMessage = useRef(null);
   const checkPw = () => {
@@ -79,6 +79,10 @@ const Join = () => {
         .catch((err) => {
           console.log(err);
         });
+      Swal.fire({
+        text: "회원가입 완료!!",
+        icon: "success",
+      });
     } else {
       Swal.fire({
         text: "입력값을 확인하세요.",
@@ -151,7 +155,7 @@ const Join = () => {
               id="memberPwRe"
               value={member.memberPwRe}
               onChange={changeMemberPwRe}
-              onBlur={checkPw}
+              onBlur={checkPw} // </div>사용자가 입력 필드에서 클릭을 다른 곳으로 이동할 때 checkId 함수가 호출
             ></input>
           </div>
           <p className="input-msg" ref={pwMessage}></p>

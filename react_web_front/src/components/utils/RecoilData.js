@@ -15,7 +15,7 @@ import { atom, selector } from "recoil";
 //로그인한 아이디를 저장하는 '저장소'
 const loginIdState = atom({
   key: "loginIdState",
-  default: "test",
+  default: "",
 });
 //로그인한 회원 타입을 저장하는 '저장소'
 const memberTypeState = atom({
