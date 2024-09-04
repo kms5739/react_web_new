@@ -46,7 +46,6 @@ const MainNavi = () => {
 const HeaderLink = () => {
   const [loginId, setLoginId] = useRecoilState(loginIdState);
   const [memberType, setMemberType] = useRecoilState(memberTypeState);
-
   const isLogin = useRecoilValue(isLoginState);
   console.log("header : ", loginId, memberType);
   const logout = () => {

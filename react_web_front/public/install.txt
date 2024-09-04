@@ -7,3 +7,6 @@ npm install sweetalert2
 
 김민석 2024-08-30 17:02
 npm install recoil
+
+김민석 2024-09-04 13:47
+npm install @toast-ui/react-editor --force
