@@ -10,6 +10,8 @@ import { loginIdState, memberTypeState } from "./components/utils/RecoilData";
 import { useEffect } from "react";
 import MemberMain from "./components/member/MemberMain";
 import BoardMain from "./components/board/BoardMain";
+import AdminMain from "./components/admin/AdminMain";
+import ChatMain from "./components/utils/ChatMain";
 
 function App() {
   const backServer = process.env.REACT_APP_BACK_SERVER;
@@ -31,7 +33,6 @@ function App() {
         .then((res) => {
           //refresh토큰을 전송해서 로그인 정보를 새로 갱신해옴
           console.log(res);
-          console.log("dddd");
           setLoginId(res.data.memberId);
           setMemberType(res.data.memberType);
           axios.defaults.headers.common["Authorization"] = res.data.accessToken;
@@ -56,6 +57,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/member/*" element={<MemberMain />} />
           <Route path="/board/*" element={<BoardMain />} />
+          <Route path="/admin/*" element={<AdminMain />} />
+          <Route path="/chat" element={<ChatMain />} />
         </Routes>
       </main>
       <Footer />
